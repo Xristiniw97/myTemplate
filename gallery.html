@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Html Template Christina</title>
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!--START OF PREFETCH -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--END OF PREFETCH -->
+
+
+    <!--START OF FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--END OF FONTS  -->
+
+
+    <!--START OF BOOTSTRAP CSS -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--END OF BOOTSTRAP CSS -->
+
+    <!--START OF OWL CAROUSEL CSS  -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--END OF OWL CAROUSEL CSS  -->
+
+    <!--START OF BOOTSTRAP JS -->
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <!--END OF BOOTSTRAP JS -->
+
+    <!--START OF JS PRELOAD  -->
+    <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--END OF JS PRELOAD  -->
+
+    <!--START OF MY STYLE  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- ONLY IN GALLERY PAGE  -->
+    <link rel="stylesheet" href="./css/glightbox.css">
+    <!--END OF MY STYLE  -->
+
+</head>
+<body class="innerPages">
+
+    <!--START OF HEADER  -->
+    <header class="header fixed-top d-flex align-items-center justify-content-around">
+      <div class="headerLogo">
+        <a href="index.html"><img src="./images/logo-revitup.jpg" alt="..."></a>
+      </div>
+      <div class="ms-auto d-inline d-lg-none">
+          <ul class="header-icons d-inline">
+            <li><a href="#"><img src="./images/telephone.svg" alt="" class="img-fluid"></a></li>
+            <li><a href="#"><img src="./images/email.svg" alt="" class="img-fluid"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-auto d-none d-lg-flex align-items-center">
+        <ul class="d-inline-flex headerMenu">
+          <li class="dropdown">
+            <a href="pageListing.html" class="dropdown-toggle" data-toggle="dropdown">Rooms</a>
+            <ul class="dropdown-menu">
+              <li><a href="innerPage.html" class="dropdown-item">Grand Suite</a></li>
+              <li><a href="innerPage.html" class="dropdown-item">Presidental Suite</a></li>
+              <li><a href="innerPage.html" class="dropdown-item">Suites</a></li>
+              <li><a href="innerPage.html" class="dropdown-item">Junior Suite</a></li>
+              <li><a href="innerPage.html" class="dropdown-item">Deluxe room</a></li>
+              <li><a href="innerPage.html" class="dropdown-item">Standard rooms</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="pageListing.html" class="dropdown-toggle" data-toggle="dropdown">Restaurants</a>
+            <ul class="dropdown-menu">
+          
+            <li><a href="innerPage.html" class="dropdown-item">Sushi Asian Food</a></li>
+            <li><a href="innerPage.html" class="dropdown-item">Le Petit Bistrot</a></li>
+            <li><a href="innerPage.html" class="dropdown-item">Authentic bar</a></li>
+            </ul>
+          </li>
+          <li><a href="offers-listing.html">Offers</a></li>
+          <li class="dropdown languagesDrop">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">English</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">Greek</a></li>
+              <li><a href="#" class="dropdown-item">Deutsch</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="bookSpace bookSpaceHeader">
+          <a class="bookBigbtn btn">Book your experience</a>
+        </div>
+      </div>
+  </header>
+  <!--END HEADER  -->
+
+  <!--START OF BOTTOM FIXED APPEARS ON RESPONSIVE MODE ONLY  -->
+  <div class="bottomMobile fixed-bottom d-flex justify-content-between d-lg-none">
+    <div class="bottomBookBtn">
+      <a class="bookBigbtn btn">Book your experience</a>
+    </div>
+    <div class="dropdown languagesDrop d-flex align-items-center">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">English</a>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">Greek</a></li>
+        <li><a href="#" class="dropdown-item">Deutsch</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END OF BOTTOM FIXED APPEARS ON RESPONSIVE MODE ONLY  -->
+
+  <!--START OF RIGHT SIDE BAR APPEARS ONLY ON LARGE SCREENS  -->
+  <div class="rightSideBar d-none d-lg-flex" id="header-right">
+    <div class="currentPage">
+        <span>GALLERY</span>
+    </div>
+    <div class="headerRightIcons">
+      <ul>
+        <li><a href="#"><img src="./images/telephone.svg" alt="" class="img-fluid"></a></li>
+        <li><a href="#"><img src="./images/email.svg" alt="" class="img-fluid"></a></li>
+        <li><a href="#"><img src="./images/facebook.svg" alt="" class="img-fluid"></a></li>
+        <li><a href="#"><img src="./images/instagram.svg" alt="" class="img-fluid"></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END OF RIGHT SIDE BAR APPEARS ONLY ON LARGE SCREENS  -->
+
+  <!--START OF MAIN NAVIGATION   -->
+  <div class="mainNavigation">
+    <!--START OF TOGGLER BUTTON  -->
+  <div class="navbar-toggle" title="Menu">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <!--END OF TOGGLER BUTTON  -->
+    <nav class="nav-hide pt-5 px-3">
+      <div class="row align-items-center justify-content-center g-0">
+        <div class="col-12 col-xl-10">
+          <div class="logo-menu mb-2 text-center">
+            <img src="./images/logo-revitup.jpg" alt="..." class="img-fluid">
+          </div>
+          <div class="address mb-5 text-center">
+            <p>12 Konstantinoupoleos, 71304, Heraklion, Crete, Greece.</p>
+          </div>
+          <ul class="main-menu">
+            <li><a href="index.html">Hotel</a></li>
+            <li><a href="textpage.html">About us</a></li>
+            <li><a href="offers-listing.html">Offers</a></li>
+            <li><a href="textpage.html">Meetings & congress</a></li>
+            <li><a href="textpage.html">Weddings</a></li>
+            <li><a href="textpage.html">Where we are</a></li>
+            <li><a href="gallery.html"  class="active">Photogallery</a></li>
+            <li><a href="textpage.html">Blog</a></li>
+            <li class="sub-menu"><a href="pageListing.html">Rooms</a>
+              <ul>
+                <li><a href="innerPage.html">Grand Suite</a></li>
+                <li><a href="innerPage.html">Presidental Suite</a></li>
+                <li><a href="innerPage.html">Suites</a></li>
+                <li><a href="innerPage.html">Junior Suite</a></li>
+                <li><a href="innerPage.html">Deluxe room</a></li>
+                <li><a href="innerPage.html">Standard rooms</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu"><a href="pageListing.html">Restaurants</a>
+              <ul>
+                <li><a href="innerPage.html">Sushi Asian Food</a></li>
+                <li><a href="innerPage.html">Le Petit Bistrot</a></li>
+                <li><a href="innerPage.html">Authentic bar</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu"><a href="pageListing.html">Service & amenities</a>
+              <ul>
+                <li><a href="textpage.html">Private excursions</a></li>
+                <li><a href="textpage.html">Swimming pool</a></li>
+                <li><a href="textpage.html">Continental breakfast</a></li>
+                <li><a href="textpage.html">Free internet connection</a></li>
+                <li><a href="textpage.html">Private party</a></li>
+                <li><a href="textpage.html">Golf club</a></li>
+                <li><a href="textpage.html">Pets friendly</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu"><a href="pageListing.html">Welness & SPA center</a>
+              <ul>
+                <li><a href="innerPage.html">Thermal pool</a></li>
+                <li><a href="innerPage.html">Sauna & Steam room</a></li>
+                <li><a href="innerPage.html">Massages & treatments</a></li>
+                <li><a href="innerPage.html">Himalayan salt room</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="bottonMainMenu">
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li><a href="textpage.html">Faq</a></li>
+            <li><a href="textpage.html">Legal notice</a></li>
+            <li><a href="textpage.html">Job</a></li>
+            <li><a href="textpage.html">Trust you</a></li>
+            <li><a href="textpage.html">Guest reviews</a></li>
+            <li><a href="textpage.html">Press</a></li>
+            <li><a href="textpage.html">Best rate</a></li>
+            <li><a href="textpage.html">404</a></li>
+            <li><a href="textpage.html">Page list</a></li>
+            <li><a href="textpage.html">Landing Page</a></li>
+            <li><a href="textpage.html">Credits</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--END OF MAIN NAVIGATION   -->
+
+
+   <!-- START OF GALLERY PAGE SECTION  -->
+    <section class="gallery-page margin-sections">
+      <div class="row">
+          <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-md-start mb-3">
+              <h1 class="text-center mb-5">Photo Gallery</h1>
+              <button class="btn filter-button active" id="all" onclick="call(this.id)">All</button>
+              <button class="btn filter-button" id="interior" onclick="call(this.id)">Interior</button>
+              <button class="btn filter-button" id="exterior" onclick="call(this.id)">Exterior</button>
+              <button class="btn filter-button" id="rooms" onclick="call(this.id)">Rooms</button>
+          </div>
+          
+          <a href="./images/image-5.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-5.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-5.jpg">
+                <img src="./images/image-5.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-3.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-3.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-3.jpg">
+                <img src="./images/image-3.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-2.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-2.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-2.jpg">
+                <img src="./images/image-2.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-4.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-4.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-4.jpg">
+                <img src="./images/image-4.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-6.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-6.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-6.jpg">
+                <img src="./images/image-6.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-5.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-5.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-5.jpg">
+                <img src="./images/image-5.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-4.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-4.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-4.jpg">
+                <img src="./images/image-4.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-3.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-3.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-3.jpg">
+                <img src="./images/image-3.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-2.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-2.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-2.jpg">
+                <img src="./images/image-2.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-1.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-1.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-1.jpg">
+                <img src="./images/image-1.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-6.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-6.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-6.jpg">
+                <img src="./images/image-6.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-5.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-5.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-5.jpg">
+                <img src="./images/image-5.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-5.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-5.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-5.jpg">
+                <img src="./images/image-5.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-3.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-3.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-3.jpg">
+                <img src="./images/image-3.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-2.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-2.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-2.jpg">
+                <img src="./images/image-2.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-4.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-4.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-4.jpg">
+                <img src="./images/image-4.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-6.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-6.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-6.jpg">
+                <img src="./images/image-6.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+          <a href="./images/image-5.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-5.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-5.jpg">
+                <img src="./images/image-5.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-4.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-4.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-4.jpg">
+                <img src="./images/image-4.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-3.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter rooms">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-3.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-3.jpg">
+                <img src="./images/image-3.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>ROOMS</h2>
+          </a>
+          <a href="./images/image-2.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter interior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-2.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-2.jpg">
+                <img src="./images/image-2.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>INTERIOR</h2>
+          </a>
+          <a href="./images/image-1.jpg"
+          class="glightbox gallery_product col-12 col-sm-6 col-xl-4 filter exterior">
+              <picture>
+                <!-- smaller image  -->
+                <source media="(max-width: 767px)" srcset="./images/image-1.jpg">
+                <!-- original image  -->
+                <source media="(min-width: 800px)" srcset="./images/image-1.jpg">
+                <img src="./images/image-1.jpg" alt="" class="img-fuid">
+              </picture>
+              <h2>EXTERIOR</h2>
+          </a>
+      </div>
+  </section>
+  <!-- END OF GALLERY PAGE SECTION  -->
+
+  <!-- START OF CONTACT INFO SECTION  -->
+  <section class="contactInfo-section margin-sections"  id="ok">
+    <div class="text-center">
+      <div class="col-12 col-lg-8 mx-auto">
+        <div class="container">
+          <div class="contactInfo-section-text p-5">
+            <h2 class="text-white">Revit Up Design Hotel Test</h2>
+            <p class="text-white">HOTEL 5 &#9733&#9733&#9733&#9733&#9733S - GREECE</p>
+            <ul class="contactInfo-details list-unstyled my-5">
+              <li>12 Konstantinoupoleos, 71304, Heraklion, Crete, Greece.</li>
+              <li>Phone: +30 6946492914</li>
+              <li>Email: <a href="#"> hello@revitup.direct</a></li>
+            </ul>
+            <h3 class="text-white mb-3">Follow Us</h3>
+            <ul class="social-list d-inline-flex flex-wrap justify-content-center list-unstyled">
+              <li><a href="#"><img src="./images/facebook.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/instagram.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/twitter-logo.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/tripadvisor-logotype.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/linkedin.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/viber-logo.svg" alt=""></a></li>
+              <li><a href="#"><img src="./images/skype-logo.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF CONTACT INFO SECTION  -->
+
+   <!--START OF FOOTER  -->
+   <footer class="footer">
+    <div class="footer-menu text-center py-3 py-lg-5 px-2">
+      <ul class="d-inline-flex flex-wrap justify-content-center">
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Faq</a></li>
+        <li><a href="#">Legal notice</a></li>
+        <li><a href="#">Job</a></li>
+        <li><a href="#">Trust you</a></li>
+        <li><a href="#">Guest reviews</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Best rate</a></li>
+        <li><a href="#">404</a></li>
+        <li><a href="#">Landing Page</a></li>
+        <li><a href="#">Page list</a></li>
+        <li><a href="#">Credits</a></li>
+      </ul>
+    </div>
+    <div class="Copyright d-flex justify-content-center align-items-center flex-wrap p-3">
+      &copy; Eyewide 2019. | <a href="/privacy-policy">Πολιτική Απορρήτου</a> | <a href="/privacy-policy" id="edit-cookieconsent-settings">Cookie Settings</a> | <a href="/services/hotel-internet-marketing" title="Hotel Internet Marketing">Hotel Internet Marketing</a>. All Rights Reserved.
+    </div>
+  </footer>
+  <!--END OF FOOTER  -->
+
+  <!-- START OF SCROLL TO TOP AND BOTTOM BUTTON  -->
+  <a href="#" class="scrollup"></a>
+  <a href="#" class="scroll-down" address="true"></a>
+  <!-- END OF SCROLL TO TOP AND BOTTOM BUTTON  -->
+
+
+  <!--START OF SCRIPTS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!--START OF MY SCRIPTS  -->
+  <script src="./scripts/scripts.js"></script>
+  <!-- ONLY IN GALLERY PAGE  -->
+  <script src="./scripts/glightbox.min.js"></script>
+  <script src="./scripts/myglightbox.js"></script>
+  <!--END OF SCRIPTS  -->
+
+  <!--END OF SCRIPTS  -->
+</body>
+</html>
